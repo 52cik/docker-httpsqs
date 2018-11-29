@@ -1,0 +1,16 @@
+httpsqs:
+  image: toomee/httpsqs
+  restart: always
+  hostname: httpsqs
+  container_name: httpsqs
+  environment:
+    HTTPSQS_PARAM_A: 123456
+  ports:
+    - 1218:1218
+  volumes:
+    - '$PWD/data:/data'
+
+# docker-compose pull    # 更新/拉取镜像
+# docker-compose up -d   # 创建并启动
+# docker-compose restart # 重启容器
+# docker-compose down    # 关闭并删除
